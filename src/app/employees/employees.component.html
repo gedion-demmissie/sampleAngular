@@ -1,0 +1,16 @@
+<span>Filter </span>
+<input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="inputGroup-sizing-sm" (keyup)="filterData($event)">
+<table  class="table table-hover table-bordered table-responsive-sm text-dark">
+    <thead>
+        <th>Id</th>
+        <th> <span (click)="sortByName($event)">Name</span></th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let samplData of filteredsampleDataResult">
+            <td>{{samplData.id}}</td>
+            <td>{{samplData.name}}</td>
+            <td>{{samplData.email}}</td>
+        </tr>
+    </tbody>
+</table>
